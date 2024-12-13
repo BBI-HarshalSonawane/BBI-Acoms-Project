@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced TOC with Sidebar, Navbar, and Comments</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <img src="https://via.placeholder.com/40" alt="Logo"> <!-- Replace with your logo -->
+    <div class="icon">
+      <img src="https://via.placeholder.com/40/0000FF/FFFFFF?text=GL" alt="GL"> <!-- Replace with your GL icon -->
+    </div>
+    <div class="icon">
+      <img src="https://via.placeholder.com/40/0000FF/FFFFFF?text=i" alt="Info"> <!-- Replace with your Info icon -->
+    </div>
+    <div class="icon">
+      <img src="https://via.placeholder.com/40/0000FF/FFFFFF?text=U" alt="User"> <!-- Replace with your User icon -->
+    </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <div id="main-navbar">
+    <h1>BB Gl</h1>
+    <div>
+      <button type="button" id="collapse-toc-btn">Collapse TOC</button>
+      <button type="button" id="collapse-comments-btn">Collapse Comments</button>
+    </div>
+  </div>
+
+<!-- Ribbon Navbar -->
+<div id="ribbon-navbar">
+  <div class="container-fluid justify-content-center align-items-center p-0 border-dark-blue-100 border-bottom border-1 overflow-auto" id="second_nav_bar">
+    <div class="d-flex flex-row g-0 text-center">
+      <!-- guideline profile -->
+      <!-- end guideline profile -->
+
+      <!-- guideline Complete version -->
+      <div class="w-100">
+        <a href="/acoms-dev/guideline/guideline_data.php?gl_id=110&unique_id=ENIH110" class="text-decoration-none">
+          <div class="p-2 bg-white border-bottom border-4 text-dark-blue-100 max-content border-dark-blue-100 fw-bold">
+            Complete version
+          </div>
+        </a>
+      </div>  
+      <!-- end guideline Complete version -->
+    </div>
+  </div>
+</div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- TOC Section -->
+      <div class="col-3" id="toc-container">
+        <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4">
+          <h3>Table of Contents</h3>
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link" href="#item-1">Item 1</a>
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
+              <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
+            </nav>
+            <a class="nav-link" href="#item-2">Item 2</a>
+            <a class="nav-link" href="#item-3">Item 3</a>
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
+              <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
+            </nav>
+            <a class="nav-link" href="#item-4">Item 4</a>
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link ms-3 my-1" href="#item-4-1">Item 4-1</a>
+              <a class="nav-link ms-3 my-1" href="#item-4-2">Item 4-2</a>
+            </nav>
+          </nav>
+        </nav>
+      </div>
+
+      <!-- Viewer Section -->
+      <div class="col-6" id="viewer-container">
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+            <div id="item-1">
+                <h4>Item 1</h4>
+                <p>Content for Item 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac enim id felis elementum condimentum. Cras in lorem ac mi cursus hendrerit et non velit.</p>
+              </div>
+              <div id="item-1-1">
+                <h5>Item 1-1</h5>
+                <p>Content for Item 1-1: Phasellus ac sapien eget justo dictum elementum. Ut at eros nec augue suscipit cursus non sit amet neque. Nam fringilla convallis nulla, ut posuere eros cursus sit amet.</p>
+              </div>
+              <div id="item-1-2">
+                <h5>Item 1-2</h5>
+                <p>Content for Item 1-2: Curabitur aliquet, magna eget laoreet hendrerit, ligula felis consequat velit, in fermentum turpis sapien non libero. Integer vel gravida nunc. Suspendisse scelerisque tincidunt sem, nec accumsan nulla.</p>
+              </div>
+              <div id="item-2">
+                <h4>Item 2</h4>
+                <p>Content for Item 2: Sed non felis et elit vehicula laoreet. Ut feugiat neque vel quam facilisis, non fermentum velit luctus. Quisque nec pharetra nulla. Integer nec lacinia est, non auctor justo.</p>
+              </div>
+              <div id="item-3">
+                <h4>Item 3</h4>
+                <p>Content for Item 3: Nulla vehicula mollis felis, ac feugiat purus accumsan sit amet. Etiam ut purus ut lorem aliquam tincidunt. Ut consequat neque vel nisl consectetur, id pretium metus sodales.</p>
+              </div>
+              <div id="item-3-1">
+                <h5>Item 3-1</h5>
+                <p>Content for Item 3-1: Vivamus scelerisque orci et sem cursus, sed viverra augue vehicula. Integer fringilla orci purus, sit amet auctor velit venenatis non. Proin vel lectus vitae risus tempor cursus non non magna.</p>
+              </div>
+              <div id="item-3-2">
+                <h5>Item 3-2</h5>
+                <p>Content for Item 3-2: In euismod tincidunt lectus, eu blandit libero sodales a. Etiam in lacus sit amet dolor tristique congue. Duis ac ante ut eros gravida tempus et eu eros.</p>
+              </div>
+              <div id="item-4">
+                <h4>Item 4</h4>
+                <p>Content for Item 4: Morbi vestibulum dolor vitae velit consequat, at tempus risus maximus. Fusce vulputate ante nec orci lobortis, id feugiat sapien pellentesque. Maecenas volutpat ultricies metus sit amet vestibulum.</p>
+              </div>
+              <div id="item-4-1">
+                <h5>Item 4-1</h5>
+                <p>Content for Item 4-1: Vivamus cursus mi eget metus placerat condimentum. Integer dapibus felis felis, vitae tincidunt nulla tempor eget. Donec tristique vehicula orci, in egestas libero facilisis vitae.</p>
+              </div>
+              <div id="item-4-2">
+                <h5>Item 4-2</h5>
+                <p>Content for Item 4-2: Aliquam erat volutpat. Ut viverra, ipsum et consectetur facilisis, dui augue gravida orci, vel tincidunt sem ex vitae dui. Sed sed ante ut arcu viverra scelerisque sit amet vel magna.</p>
+              </div>
+              
+        </div>
+      </div>
+
+      <!-- Comments Section -->
+      <div class="col-3" id="comments-container">
+        <h4>Comments</h4>
+        <p>Comment 1: Lorem ipsum dolor sit amet...</p>
+        <p>Comment 2: Consectetur adipiscing elit...</p>
+        <p>Comment 3: Sed do eiusmod tempor incididunt...</p>
+        <p>Comment 4: Ut labore et dolore magna aliqua...</p>
+        <p>Comment 5: Ut enim ad minim veniam...</p>
+      </div>
+    </div>
+  </div>
+
+ <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* Sidebar Styling */
+  #sidebar {
+    width: 60px;
+    background-color: #6293c9;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1020;
+  }
+
+  #sidebar img {
+    width: 40px;
+    margin-bottom: 20px;
+  }
+
+  #sidebar .icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #sidebar .icon img {
+    width: 60%;
+  }
+
+  /* Navbar Styling */
+  #main-navbar {
+    margin-left: 60px;
+    height: 60px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  #main-navbar h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #4784c5;
+    text-align: center;
+    flex-grow: 1;
+  }
+
+  #main-navbar button {
+    background-color: #5194da;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+  }
+
+  #ribbon-navbar {
+    margin-left: 60px;
+    background-color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  #ribbon-navbar .ribbon {
+    background-color: #448ddb;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+
+  /* TOC Container Styling */
+  #toc-container {
+    margin-left: 60px;
+    position: sticky;
+    top: 110px; /* Space for navbars */
+    height: calc(100vh - 110px);
+    overflow-y: auto;
+    border-right: 1px solid #ccc;
+    background-color: #f8f9fa;
+    transition: transform 0.3s ease;
+  }
+
+  /* Viewer Container Styling */
+  #viewer-container {
+    flex: 2;
+    padding: 20px;
+    overflow-y: auto;
+    height: calc(100vh - 110px);
+    transition: width 0.3s ease;
+  }
+
+  /* Comments Section Styling */
+  #comments-container {
+    flex: 1;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+    overflow-y: auto;
+    height: calc(100vh - 110px); /* Space for navbars */
+    background-color: #f0f0f0;
+    transition: width 0.3s ease;
+  }
+
+  .scrollspy-example-2 {
+    height: calc(100vh - 110px);
+    overflow-y: auto;
+  }
+
+  h4, h5 {
+    margin-top: 60px;
+  }
+
+  /* For collapsed TOC */
+  #toc-container.collapsed {
+    transform: translateX(-100%);
+  }
+
+  /* For collapsed Comments */
+  #comments-container.collapsed {
+    width: 0;
+    padding: 0;
+    border-left: none;
+  }
